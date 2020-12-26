@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="box-holder">
+      <label for="gen-pass"><input type="text" name="gen-pass" id="gen-pass" readonly
+          placeholder="Your Password appears hear" />
+        <div class="cursor" onclick="copy()" onmouseout="outFunc()"><i class="fa fa-clone" aria-hidden="true"></i>
+          <div id="myTooltip"></div>
+        </div>
+      </label>
+    </div>
+    <div class="switch-holder">
+      <label for="upper">UPPERCASE(A-Z)&nbsp;<input type="checkbox" name="lupper" id="upper" /><span
+          class="toggle"></span>
+      </label>
+    </div>
+    <div class="switch-holder">
+      <label for="lower">lowercase(a-z)<input type="checkbox" name="lower" id="lower" /><span class="toggle"></span>
+      </label>
+    </div>
+    <div class="switch-holder">
+      <label for="num">numbers(0-9)<input type="checkbox" name="num" id="num" /><span class="toggle"></span>
+      </label>
+    </div>
+    <div class="switch-holder">
+      <label for="symbols">symbols<input type="checkbox" name="symbols" id="symbols" /><span class="toggle"></span>
+      </label>
+    </div>
+    <div class="box-holder">
+      <label for="length"><span>8</span> &nbsp;<input type="range" name="length" id="length" min="8" max="50" value="12"
+          placeholder="Password Length(default - 8)" onchange="change()" />&nbsp;<span id="value">12</span> </label>
+    </div>
+
+    <div class="box-holder center">
+      <button onclick="generate()">Generate</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
